@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#1a1d24" />
+    <meta name="description" content="Bolt Buster: Screw Puzzle. Unscrew the bolts, drop the plates, fill the color boxes." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Bolt Buster</title>
+    <script type="module" crossorigin src="./assets/index-0kX0NZ1V.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cw36FVXz.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="hud">
+        <div class="hud__side">
+          <button type="button" id="btn-settings" class="icon-btn" aria-label="Settings" data-i18n-aria="aria_settings" data-testid="btn-settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm7.4-2.5.1-1-.1-1 2.1-1.6-2-3.5-2.5 1a7.6 7.6 0 0 0-1.7-1L15 3.3h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11l-.1 1 .1 1-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5Z"/></svg>
+          </button>
+          <button type="button" id="btn-lang" class="icon-btn icon-btn--flag" aria-label="Language" data-i18n-aria="aria_language" data-testid="btn-lang"></button>
+        </div>
+        <div class="hud__center">
+          <h1 id="hud-level" class="hud__level" data-testid="hud-level">Level 1</h1>
+          <p id="hud-moves" class="hud__moves" data-testid="hud-moves" aria-live="polite"></p>
+        </div>
+        <div class="hud__side hud__side--end">
+          <button type="button" id="btn-restart" class="icon-btn" aria-label="Restart level" data-i18n-aria="aria_restart" data-testid="btn-restart">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7Z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="topbar">
+        <div id="buster-slot" aria-hidden="true"></div>
+        <div id="boxes" class="boxes" data-testid="boxes"></div>
+      </section>
+      <main class="stage"><div id="board" class="board" role="group" aria-label="Board" data-i18n-aria="aria_board" data-testid="board"></div></main>
+      <section id="trayrow" class="trayrow"></section>
+
+      <nav class="toolbar">
+        <button type="button" id="btn-undo" class="tool" data-testid="btn-undo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5 3 10.5 9 16v-3.8h5.5a4 4 0 0 1 0 8H11V23h3.5a6.8 6.8 0 0 0 0-13.6H9Z"/></svg>
+          <span class="tool__label" data-i18n="tool_undo">Undo</span><span class="tool__badge"></span>
+        </button>
+        <button type="button" id="btn-hint" class="tool" data-testid="btn-hint">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 4 12.7V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.3A7 7 0 0 1 12 2Zm-3 17h6v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1Z"/></svg>
+          <span class="tool__label" data-i18n="tool_hint">Hint</span><span class="tool__badge"></span>
+        </button>
+        <button type="button" id="btn-slot" class="tool" data-testid="btn-slot">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3Zm8 1v2H9v2h2v2h2v-2h2v-2h-2V9Z"/></svg>
+          <span class="tool__label" data-i18n="tool_slot">+1 Slot</span><span class="tool__badge"></span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>
